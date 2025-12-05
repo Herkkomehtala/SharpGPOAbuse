@@ -899,7 +899,7 @@ Revision=1";
                         {
                             if (line.Replace(" ", "").Contains("</ScheduledTasks>"))
                             {
-                                line = ImmediateTaskXML + line;
+                                line = line.Replace("</ScheduledTasks>", ImmediateTaskXML + "</ScheduledTasks>");
                             }
                             new_list.Add(line);
                         }
